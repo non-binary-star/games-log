@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?schema=public
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+application:
+  persistence:
+    implementation: HIBERNATE
+  host: http://localhost:${server.port}
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        stat: debug
+ui:
+  app:
+    origin: http://localhost:5173
