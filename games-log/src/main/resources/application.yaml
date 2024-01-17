@@ -1,0 +1,32 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: ${DB_JDBC_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    baseline-on-migrate: true
+  graphql:
+    cors:
+      allowed-origins:
+        - http://localhost:5173
+        - http://localhost:4173
+        - http://localhost:4000
+      allowed-methods: POST
+    graphiql:
+      enabled: true
+  web:
+    resources:
+      static-locations: classpath:/static/
+application:
+  persistence:
+    implementation: HIBERNATE
+  host: http://localhost:${server.port}
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+        stat: debug

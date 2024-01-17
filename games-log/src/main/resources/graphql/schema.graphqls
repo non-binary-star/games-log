@@ -1,0 +1,20 @@
+type Query {
+    userById(id: ID): User
+    userByName(name: String): User
+    gamesListByUserId(userId: ID): [ListEntry!]!
+}
+
+type User {
+    id: ID!
+    name: String!
+}
+
+type ListEntry {
+    label: String!
+    game: Game!
+}
+
+type Game {
+    id: ID!
+    name: String!
+}
