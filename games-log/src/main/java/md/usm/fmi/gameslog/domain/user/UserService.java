@@ -24,13 +24,13 @@ public class UserService {
     public User findById(final UUID id) {
         return userRepository.findById(id)
                 .map(User::of)
-                .orElseThrow(EntityNotFoundException::new);
+                .orElse(null);
     }
 
     public User findByName(final String name) {
         return userRepository.findByName(name)
                 .map(User::of)
-                .orElseThrow(EntityNotFoundException::new);
+                .orElse(null);
     }
 
     @Transactional
