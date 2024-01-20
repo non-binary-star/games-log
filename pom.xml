@@ -22,4 +22,13 @@
         <module>games-log-ui</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.github.git-commit-id</groupId>
+                <artifactId>git-commit-id-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

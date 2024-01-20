@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequiredArgsConstructor
 public class ViewsController {
 
-    @GetMapping(value = { "/user/{user_id}/gameslist", "/user/{user_id}/gameslist/{filter}"})
+    @GetMapping(value = {
+            "/user/{user_id}/gameslist",
+            "/user/{user_id}/gameslist/{filter}"})
     public String index() {
         return "forward:/";
     }

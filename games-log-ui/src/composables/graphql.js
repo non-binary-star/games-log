@@ -3,9 +3,9 @@ import {GQL_BASE_PATH} from "../components/Props.vue";
 import {ref, watch} from "vue";
 
 export default function useGraphql(method, params, fields) {
-    const fetchedData = ref(null);
+    const fetchedData = ref({});
 
-    fetchedData.value = null;
+    // fetchedData.value = null;
     const computedArgs = Object.keys(params).map(key => `${key}:"${params[key]}"`).join(',');
 
     const computedQuery = {

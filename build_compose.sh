@@ -1,2 +1,2 @@
-docker build -t gameslog:latest .
+docker build -t binarystarrr/gameslog .
 docker-compose up -d

@@ -7,6 +7,7 @@ WORKDIR /app/games-log-ui
 RUN npm install
 COPY games-log-ui .
 COPY pom.xml /app/
+COPY .git /app/.git
 RUN npm run build
 RUN mvn clean install
 WORKDIR /app
